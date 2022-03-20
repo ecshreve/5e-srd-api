@@ -314,18 +314,14 @@
       <td align="left">proficiencies</td>
       <td align="left">Starting proficiencies all new characters of this class start with.</td>
       <td align="left">
-        list <a href="#apireference">APIReference</a> (<a href="#proficiencies"
-          >Proficiencies</a
-        >)
+        list <a href="#apireference">APIReference</a> (<a href="#proficiencies">Proficiencies</a>)
       </td>
     </tr>
     <tr>
       <td align="left">saving_throws</td>
       <td align="left">Saving throws that the class is proficient in.</td>
       <td align="left">
-        list <a href="#apireference">APIReference</a> (<a href="#ability-scores"
-          >Ability Scores</a
-        >)
+        list <a href="#apireference">APIReference</a> (<a href="#ability-scores">Ability Scores</a>)
       </td>
     </tr>
     <tr>
@@ -443,7 +439,7 @@
   ]
 }</code></pre>
 
-<h3 id="#spellcasting">GET api/classes/{index}/spellcasting</h3>
+<h3 id="spellcasting">GET api/classes/{index}/spellcasting</h3>
 
 <pre><code>{
     "level": 1,
@@ -491,7 +487,7 @@
   }
 }</code></pre>
 
-<h4 id="spellcasting">Spellcasting</h4>
+<h4>Spellcasting</h4>
 
 <table>
   <thead>
@@ -511,9 +507,7 @@
       <td align="left">spellcasting_ability</td>
       <td align="left">The attribute used for spellcasting by the class.</td>
       <td align="left">
-        <a href="#apireference">APIReference</a> (<a href="#ability-scores"
-          >Ability Score</a
-        >)
+        <a href="#apireference">APIReference</a> (<a href="#ability-scores">Ability Score</a>)
       </td>
     </tr>
     <tr>
@@ -580,20 +574,18 @@
     </tr>
   </thead>
   <tbody>
-    <tbody>
-      <tr>
-        <td align="left">count</td>
-        <td align="left">The number of features available to a class.</td>
-        <td align="left">integer</td>
-      </tr>
-      <tr>
-        <td align="left">results</td>
-        <td align="left">A list of features available to a class.</td>
-        <td align="left">
-          list <a href="#apireference">APIReference</a> (<a href="#features">Features</a>)
-        </td>
-      </tr>
-    </tbody>
+    <tr>
+      <td align="left">count</td>
+      <td align="left">The number of features available to a class.</td>
+      <td align="left">integer</td>
+    </tr>
+    <tr>
+      <td align="left">results</td>
+      <td align="left">A list of features available to a class.</td>
+      <td align="left">
+        list <a href="#apireference">APIReference</a> (<a href="#features">Features</a>)
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -627,24 +619,22 @@
     </tr>
   </thead>
   <tbody>
-    <tbody>
-      <tr>
-        <td align="left">count</td>
-        <td align="left">The number of proficiencies available to a class.</td>
-        <td align="left">integer</td>
-      </tr>
-      <tr>
-        <td align="left">results</td>
-        <td align="left">A list of proficiencies available to a class.</td>
-        <td align="left">
-          list <a href="#apireference">APIReference</a> (<a href="#proficiencies">Proficiencies</a>)
-        </td>
-      </tr>
-    </tbody>
+    <tr>
+      <td align="left">count</td>
+      <td align="left">The number of proficiencies available to a class.</td>
+      <td align="left">integer</td>
+    </tr>
+    <tr>
+      <td align="left">results</td>
+      <td align="left">A list of proficiencies available to a class.</td>
+      <td align="left">
+        list <a href="#apireference">APIReference</a> (<a href="#proficiencies">Proficiencies</a>)
+      </td>
+    </tr>
   </tbody>
 </table>
 
-<h3 id="#multi-classing">GET api/classes/{index}/multi-classing/</h3>
+<h3 id="multi-classing">GET api/classes/{index}/multi-classing/</h3>
 
 <pre><code>{
   "prerequisites": [
@@ -745,7 +735,7 @@
   </tbody>
 </table>
 
-<h3>GET api/classes/{index}/levels/</h3>
+<h3 id="levels">GET api/classes/{index}/levels/</h3>
 
 <pre><code>[
   {
@@ -1048,24 +1038,24 @@
     </tr>
   </thead>
   <tbody>
-    <tbody>
-      <tr>
-        <td align="left">count</td>
-        <td align="left">The number of features available to a class at the requested level.</td>
-        <td align="left">integer</td>
-      </tr>
-      <tr>
-        <td align="left">results</td>
-        <td align="left">A list of features available to a class at the requested level.</td>
-        <td align="left">
-          list <a href="#apireference">APIReference</a> (<a href="#features">Features</a>)
-        </td>
-      </tr>
-    </tbody>
+    <tr>
+      <td align="left">count</td>
+      <td align="left">The number of features available to a class at the requested level.</td>
+      <td align="left">integer</td>
+    </tr>
+    <tr>
+      <td align="left">results</td>
+      <td align="left">A list of features available to a class at the requested level.</td>
+      <td align="left">
+        list <a href="#apireference">APIReference</a> (<a href="#features">Features</a>)
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h3>GET api/classes/{index}/levels/{integer 0-9}/spells</h3>
-<p>Gets spells of a certain spell_level going from cantrip (0) to 9th level that the class indicated by the value in {index} would know </p>
+<p>Gets spells of a certain spell_level going from cantrip (0) to 9th level that the class indicated by the value in
+  {index} would know </p>
 
 <pre><code>{
   "count": 19,
@@ -1095,18 +1085,18 @@
     </tr>
   </thead>
   <tbody>
-    <tbody>
-      <tr>
-        <td align="left">count</td>
-        <td align="left">The number of spells available to a class at the specified level.</td>
-        <td align="left">integer</td>
-      </tr>
-      <tr>
-        <td align="left">results</td>
-        <td align="left">A list of spells availabe to a class at the specified level.</td>
-        <td align="left">
-          list <a href="#apireference">APIReference</a> (<a href="#spells">Spells</a>)
-        </td>
-      </tr>
-    </tbody>
+  <tbody>
+    <tr>
+      <td align="left">count</td>
+      <td align="left">The number of spells available to a class at the specified level.</td>
+      <td align="left">integer</td>
+    </tr>
+    <tr>
+      <td align="left">results</td>
+      <td align="left">A list of spells availabe to a class at the specified level.</td>
+      <td align="left">
+        list <a href="#apireference">APIReference</a> (<a href="#spells">Spells</a>)
+      </td>
+    </tr>
+  </tbody>
 </table>
