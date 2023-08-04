@@ -73,6 +73,7 @@ const EquipmentSchema = new Schema<Equipment>({
   desc: { type: [String], index: true },
   equipment_category: APIReferenceSchema,
   gear_category: APIReferenceSchema,
+  currency_category: { type: String, index: true },
   index: { type: String, index: true },
   name: { type: String, index: true },
   properties: [APIReferenceSchema],

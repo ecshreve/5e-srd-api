@@ -12,13 +12,13 @@ type LevelPrerequisite = {
 type FeaturePrerequisite = {
   _id?: boolean;
   type: string;
-  feature: string;
+  feature: string | null;
 };
 
 type SpellPrerequisite = {
   _id?: boolean;
   type: string;
-  spell: string;
+  spell: string | null;
 };
 
 type FeatureSpecific = {

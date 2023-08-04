@@ -33,6 +33,7 @@ export const resolveEquipmentType = (equipment: Equipment) => {
   if (equipment.armor_class) return 'Armor';
   if (equipment.weapon_category) return 'Weapon';
   if (equipment.vehicle_category) return 'Vehicle';
+  if (equipment.currency_category) return 'Currency';
   return null;
 };
 
@@ -253,7 +254,7 @@ export const levelObjectToArray = (obj: Record<string, string | number>, fieldNa
   Object.entries(obj).map(([level, value]) => ({ level, [fieldName]: value }));
 
 export type ResolvedDC = {
-  type: string;
+  type: string | null;
   success: string;
   value?: number;
 };

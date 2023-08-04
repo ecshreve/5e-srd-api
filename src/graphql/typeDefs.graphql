@@ -53,7 +53,7 @@ type WeaponProperty {
   desc: [String!]!
 }
 
-enum Currency {
+enum Coin {
   CP
   SP
   GP
@@ -61,7 +61,7 @@ enum Currency {
 
 type Cost {
   quantity: Int!
-  unit: Currency!
+  unit: Coin!
 }
 
 type EquipmentCategory {
@@ -164,6 +164,16 @@ type Ammunition implements IGear & IEquipment & IEquipmentBase {
   weight: Float
   gear_category: EquipmentCategory!
   quantity: Int!
+}
+
+type Currency implements IEquipment & IEquipmentBase {
+  index: String!
+  name: String!
+  desc: [String!]
+  cost: Cost!
+  weight: Float
+  equipment_category: EquipmentCategory!
+  currency_category: EquipmentCategory!
 }
 
 type Damage {
@@ -380,7 +390,7 @@ type Spell {
   school: MagicSchool!
 }
 
-union ProficiencyReference = EquipmentCategory | Skill | AbilityScore | Tool | Armor | Weapon | Vehicle | Gear | Pack | Ammunition
+union ProficiencyReference = EquipmentCategory | Skill | AbilityScore | Tool | Armor | Weapon | Vehicle | Gear | Pack | Ammunition 
 
 enum ProficiencyType {
   WEAPONS

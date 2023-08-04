@@ -62,6 +62,7 @@ export type Equipment = {
   desc: string[];
   equipment_category: APIReference;
   gear_category?: APIReference;
+  currency_category?: string;
   index: string;
   name: string;
   properties?: APIReference[];

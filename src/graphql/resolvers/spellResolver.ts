@@ -15,7 +15,7 @@ import { Spell } from '../../models/spell/types';
 import { DamageType } from '../../models/damageType/types';
 
 type SpellDamage = {
-  damage_type?: DamageType;
+  damage_type?: DamageType | null;
   damage_at_slot_level?: Record<string, string | number>[];
   damage_at_character_level?: Record<string, string | number>[];
 };
